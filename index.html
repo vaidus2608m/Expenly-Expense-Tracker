@@ -5,45 +5,45 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Expenly - Personal Tracker</title>
+
+  <link rel="icon" type="image/png" href="Images/logo.png" />
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-
   <div class="container">
 
-    <!-- HEADER -->
     <header class="header">
-      <div>
-        <h1>Expenly</h1>
-        <p>Simple money tracking</p>
+      <div class="brand">
+        <img src="Images/logo.png" alt="Expenly Logo" class="logo" />
+        <div>
+          <h1>Expenly</h1>
+          <p>Simple money tracking</p>
+        </div>
       </div>
-      <div class="date-badge" id="currentMonth">January 2026</div>
+      <div class="date-badge" id="currentMonth"></div>
     </header>
 
-    <!-- SUMMARY -->
     <section class="summary-row">
       <div class="card total-card">
         <span>Total Balance</span>
-        <h2 id="totalBalance">$0.00</h2>
+        <h2 id="totalBalance">₹0.00</h2>
       </div>
 
       <div class="card income-card">
         <span>Total Income</span>
-        <h2 id="totalIncome" class="green">+$0.00</h2>
+        <h2 id="totalIncome" class="green">₹0.00</h2>
       </div>
 
       <div class="card expense-card">
         <span>Total Expenses</span>
-        <h2 id="totalExpense" class="red">-$0.00</h2>
+        <h2 id="totalExpense" class="red">₹0.00</h2>
       </div>
     </section>
 
-    <!-- MAIN -->
     <section class="main-layout">
 
-      <!-- FORM -->
       <div class="form-section card">
         <h3>Add New Transaction</h3>
 
@@ -77,31 +77,25 @@
             </select>
           </div>
 
-          <div class="row">
-            <div class="input-box">
-              <label>Method</label>
-              <select id="methodInput">
-                <option value="Card">Card</option>
-                <option value="Cash">Cash</option>
-              </select>
-            </div>
+          <div class="input-box">
+            <label>Method</label>
+            <select id="methodInput">
+              <option value="Card">Card</option>
+              <option value="Cash">Cash</option>
+            </select>
           </div>
 
           <button type="submit" class="add-btn">Add Transaction</button>
         </form>
       </div>
 
-      <!-- DATA -->
       <div class="data-section">
 
-        <!-- ACTIVITY -->
         <div class="card list-section">
           <h3>Recent Activity</h3>
-          <ul class="activity-list" id="activityList">
-          </ul>
+          <ul class="activity-list" id="activityList"></ul>
         </div>
 
-        <!-- CHART -->
         <div class="card chart-section">
           <h3>Breakdown</h3>
 
@@ -111,14 +105,11 @@
             </div>
           </div>
 
-          <div class="legend" id="chartLegend">
-            <!-- JS WILL RENDER LEGEND -->
-          </div>
+          <div class="legend"></div>
         </div>
 
       </div>
     </section>
-
   </div>
 
   <script src="script.js"></script>
