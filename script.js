@@ -85,7 +85,7 @@ function updateTransaction(event) {
   amountSpan.classList.add(transectionType === "income" ? "green" : "red");
   amountSpan.textContent = `${
     transectionType === "income" ? "+" : "-"
-  }$${amount}`;
+  }₹${amount}`;
 
   element.appendChild(infoDiv);
   element.appendChild(amountSpan);
@@ -185,5 +185,6 @@ function loadFromStorage() {
 
   updateChart();
 }
+
 
 loadFromStorage();
